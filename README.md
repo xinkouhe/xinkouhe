@@ -1,37 +1,37 @@
 # xinkouhe · 心口合
 
-一個以 Astro 建立的中文靜態博客，適合部署到 GitHub Pages。
+一个以 Astro 建立的中文静态博客，适合部署到 GitHub Pages。
 
-## 本地開發
+## 本地开发
 
 ```bash
 npm install
 npm run dev
 ```
 
-建置與預覽：
+构建与预览：
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## 寫新文章
+## 写新文章
 
-在 `src/content/posts/` 新增 Markdown 檔案，使用以下 frontmatter：
+在 `src/content/posts/` 新增 Markdown 文件，使用以下 frontmatter：
 
 ```md
 ---
-title: '文章標題'
+title: '文章标题'
 description: '文章摘要'
 date: 2026-09-11
-category: '隨筆'
+category: '随笔'
 tags: ['生活']
 featured: false
-readingTime: '5 分鐘'
+readingTime: '5 分钟'
 ---
 ```
 
-推送到 `main` 後，GitHub Actions 會自動建置並部署。首次使用時，請在 GitHub repository 的 Settings → Pages → Build and deployment 中將 Source 設為 GitHub Actions。
+推送到 `main` 后，GitHub Actions 会自动构建并部署。首次使用时，请在 GitHub repository 的 Settings → Pages → Build and deployment 中将 Source 设为 GitHub Actions。
 
-`astro.config.mjs` 會依照 `GITHUB_REPOSITORY` 自動處理 user page 與 project page 的路徑。
+`astro.config.mjs` 会依照 `GITHUB_REPOSITORY` 自动处理 user page 与 project page 的路径。

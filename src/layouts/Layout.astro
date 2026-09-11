@@ -14,7 +14,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
 ---
 
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="zh-Hans">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -30,11 +30,11 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
     <div class="paper-grain" aria-hidden="true"></div>
     <header class="site-header">
       <div class="header-inner shell">
-        <a class="brand" href={base} aria-label="回到 xinkouhe 首頁">
+        <a class="brand" href={base} aria-label="回到 xinkouhe 首页">
           <span class="brand-mark">心</span>
           <span class="brand-name">xinkouhe</span>
         </a>
-        <nav class="site-nav" aria-label="主要導覽">
+        <nav class="site-nav" aria-label="主要导航">
           {site.nav.map((item) => (
             <a href={`${base}${item.href}`} class:list={[{ active: item.href === '' ? Astro.url.pathname === base : Astro.url.pathname.startsWith(`${base}${item.href.replace('/', '')}`) }]}>
               {item.label}
@@ -42,8 +42,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
           ))}
         </nav>
         <div class="header-actions">
-          <a class="rss-link" href={`${base}rss.xml`} aria-label="訂閱 RSS">RSS</a>
-          <button class="theme-toggle" type="button" aria-label="切換深色模式" data-theme-toggle>
+          <a class="rss-link" href={`${base}rss.xml`} aria-label="订阅 RSS">RSS</a>
+          <button class="theme-toggle" type="button" aria-label="切换深色模式" data-theme-toggle>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.6 15.9A8.5 8.5 0 0 1 8.1 3.4 8.5 8.5 0 1 0 20.6 15.9Z" /></svg>
           </button>
         </div>
@@ -55,12 +55,12 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
     <footer class="site-footer shell">
       <div>
         <p class="footer-brand">心口合</p>
-        <p class="footer-note">山高水長，來日方長。</p>
+        <p class="footer-note">山高水长，来日方长。</p>
       </div>
       <div class="footer-meta">
         <span>© {new Date().getFullYear()} xinkouhe</span>
         <span class="footer-dot">·</span>
-        <a href={`${base}rss.xml`}>訂閱 RSS</a>
+        <a href={`${base}rss.xml`}>订阅 RSS</a>
       </div>
     </footer>
     <script is:inline>

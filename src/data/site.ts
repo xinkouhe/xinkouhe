@@ -1,17 +1,17 @@
 export const site = {
   name: 'xinkouhe',
   title: '心口合 · 一方清寂',
-  description: '把日子寫成風，把心事放進山水之間。',
+  description: '把日子写成风，把心事放进山水之间。',
   author: 'xinkouhe',
   nav: [
-    { label: '首頁', href: '' },
+    { label: '首页', href: '' },
     { label: '文章', href: 'posts/' },
-    { label: '關於', href: 'about/' },
+    { label: '关于', href: 'about/' },
   ],
 };
 
 export const formatDate = (date: Date) =>
-  new Intl.DateTimeFormat('zh-TW', {
+  new Intl.DateTimeFormat('zh-CN', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',

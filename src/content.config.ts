@@ -7,10 +7,10 @@ const posts = defineCollection({
     title: z.string(),
     description: z.string(),
     date: z.coerce.date(),
-    category: z.string().default('隨筆'),
+    category: z.string().default('随笔'),
     tags: z.array(z.string()).default([]),
     featured: z.boolean().default(false),
-    readingTime: z.string().default('5 分鐘'),
+    readingTime: z.string().default('5 分钟'),
   }),
 });
 

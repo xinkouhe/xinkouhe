@@ -8,7 +8,7 @@ export async function GET(context) {
 
   return rss({
     title: 'xinkouhe · 心口合',
-    description: '把日子寫成風，把心事放進山水之間。',
+    description: '把日子写成风，把心事放进山水之间。',
     site: siteUrl,
     items: posts.map((post) => ({
       title: post.data.title,
@@ -16,6 +16,6 @@ export async function GET(context) {
       pubDate: post.data.date,
       link: `${base}posts/${post.id}/`,
     })),
-    customData: '<language>zh-TW</language>',
+    customData: '<language>zh-CN</language>',
   });
 }
