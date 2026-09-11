@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="關於 · xinkouhe" description="關於 xinkouhe，和這個小小的寫作角落。">
+  <section class="about-page shell">
+    <div>
+      <p class="eyebrow">A little introduction</p>
+      <h1>與自己<br />保持通信</h1>
+      <p class="about-lead">你好，我是 xinkouhe。<br />很高興在字句之間遇見你。</p>
+      <div class="about-stamp">心口合</div>
+    </div>
+    <div class="about-copy">
+      <p>這裡是一座不太喧鬧的庭院，偶爾談技術，偶爾記生活，也偶爾什麼都不談，只看一場雨落完。</p>
+      <p>我相信寫作並不總是為了抵達答案。有時候，只是替一段思緒留一盞燈，讓未來回頭時，還能認出當時的自己。</p>
+      <p>如果你也喜歡慢一點的文字，歡迎在這裡坐坐。</p>
+      <div class="about-details">
+        <div class="detail-line"><span>Currently</span><span>在學習如何生活</span></div>
+        <div class="detail-line"><span>Writing about</span><span>思考 · 技術 · 日常</span></div>
+        <div class="detail-line"><span>Elsewhere</span><span><a href={base}>這片山水之間</a></span></div>
+      </div>
+    </div>
+  </section>
+</Layout>

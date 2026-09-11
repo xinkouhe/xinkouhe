@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { formatDate } from '../../data/site';
+
+const posts = (await getCollection('posts')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="文章 · xinkouhe" description="xinkouhe 的全部文章。">
+  <section class="page-intro shell">
+    <p class="eyebrow">Archive / Notes</p>
+    <h1>文章</h1>
+    <p>把走過的路、讀過的書，和心裡偶然亮起的念頭，慢慢整理成字。</p>
+  </section>
+  <section class="archive shell">
+    <div class="archive-list">
+      {posts.map((post) => (
+        <article class="archive-item">
+          <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+          <div><h2><a href={`${base}posts/${post.id}/`}>{post.data.title}</a></h2><p>{post.data.description}</p></div>
+          <span class="category">{post.data.category}</span>
+        </article>
+      ))}
+    </div>
+  </section>
+</Layout>
