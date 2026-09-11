@@ -50,7 +50,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
       </div>
     </header>
 
-    <main>{Astro.children}</main>
+    <main><slot /></main>
 
     <footer class="site-footer shell">
       <div>
